@@ -8,7 +8,7 @@ from sklearn.model_selection import train_test_split
 from sklearn.tree import DecisionTreeRegressor
 
 column_names = [
-    'Fran Datum Tid (UTC)', 'till', 'day', 'temperature', 'Kvalitet', 'Tidsutsnitt:', 'Unnamed: 5'
+    'Fran Datum Tid (UTC)', 'till', 'day', 'temperature', 'quality', 'Time:', 'Unnamed: 5'
 ]
 column_names_used = [
     'Fran Datum Tid (UTC)', 'till', 'day'
@@ -61,9 +61,9 @@ def train():
     print(data1)
 
     data1 = data2.append(data1)
-    data1 = data1.drop('Tidsutsnitt:', axis=1)
+    data1 = data1.drop('Time:', axis=1)
     X = data1.drop(["temperature"], axis=1)
-    X = X.drop(['Kvalitet'], axis=1)
+    X = X.drop(['quality'], axis=1)
     X = X.drop(['Unnamed: 5'], axis=1)
     fix_array(X)
     y = data1['temperature']
