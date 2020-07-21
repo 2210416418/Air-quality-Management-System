@@ -8,10 +8,10 @@ from sklearn.model_selection import train_test_split
 from sklearn.tree import DecisionTreeRegressor
 
 column_names = [
-    'Fran Datum Tid (UTC)', 'till', 'day', 'temperature', 'quality', 'Time:', 'Unnamed: 5'
+    'From Date id (UTC)', 'till', 'day', 'temperature', 'quality', 'Time:', 'Unnamed: 5'
 ]
 column_names_used = [
-    'Fran Datum Tid (UTC)', 'till', 'day'
+    'From Date Tid (UTC)', 'till', 'day'
 ]
 
 
